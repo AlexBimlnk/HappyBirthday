@@ -73,11 +73,11 @@ namespace HappyBirthdayAlina
                 "\nИ целеустремленной\n" +
                 "Относиться спокойно к тому, что тебе неподвластно;\n" +
                 "Успехов в любых твоих начинаниях,\nА главное - здоровья!";
+
             string[] ar = txt.Split('\n');
+
             void Work()
             {
-                Console.ForegroundColor = ConsoleColor.Yellow;
-                Console.Title = "Happy Birthday, Alina";
                 foreach (var i in ar)
                 {
                     Console.WriteLine($"\t{i}\n");
@@ -90,7 +90,9 @@ namespace HappyBirthdayAlina
 
         static void Main(string[] args)
         {
-            Thread.Sleep(1000);
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Title = "Happy Birthday, Alina";
+            Thread.Sleep(2000);
             AsyncTextWriter();
             HappyBirthday();
             Console.ReadKey();
